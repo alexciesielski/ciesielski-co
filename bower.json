@@ -1,18 +1,15 @@
 {
-  "name": "angular-seed",
-  "description": "A starter project for AngularJS",
-  "version": "0.0.0",
-  "homepage": "https://github.com/angular/angular-seed",
-  "license": "MIT",
+  "name": "ciesielski-co",
+  "description": "Alexander Ciesielski - Ciesielski.co",
+  "version": "0.0.2",
+  "homepage": "https://github.com/alexciesielski/ciesielski-co",
   "private": true,
   "dependencies": {
     "angular": "~1.4.0",
     "angular-route": "~1.4.0",
     "angular-loader": "~1.4.0",
     "angular-mocks": "~1.4.0",
-    "html5-boilerplate": "~5.2.0"
-  },
-  "devDependencies": {
-    "angular-translate": "^2.11.0"
+	"angular-translate": "^2.11.0",
+    "bootstrap": "^3.3.6"
   }
 }
