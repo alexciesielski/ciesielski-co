@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html lang="pl" ng-app="app" class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html lang="pl" ng-app="app" class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html lang="pl" ng-app="app" class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html lang="pl" ng-app="app" ng-controller="AppController as vm" class="no-js">
+<!--<![endif]-->
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<meta name="description" content="">
+	<title>Alexander Ciesielski - ciesielski.co</title>
+
+	<!-- Bootstrap Core CSS -->
+	<link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
+
+	<!-- Custom Fonts -->
+	<link href="http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800"
+	rel="stylesheet" type="text/css">
+	<link href="http://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic"
+	rel="stylesheet" type="text/css">
+	<link rel="stylesheet" href="font-awesome/css/font-awesome.min.css" type="text/css">
+
+	<!-- Plugin CSS -->
+	<link rel="stylesheet" href="css/animate.min.css" type="text/css">
+
+	<!-- Custom CSS -->
+	<link rel="stylesheet" href="css/creative.css" type="text/css">
+	<link rel="stylesheet" href="css/flag-icon.min.css" type="text/css">
+
+</head>
+
+<body id="page-top">
+	<nav id="mainNav" class="navbar navbar-default navbar-fixed-top">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+					<span class="sr-only">Nawigacja</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand page-scroll" href="#page-top"></a>
+			</div>
+
+			<!-- Collect the nav links, forms, and other content for toggling -->
+			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+				<ul class="nav navbar-nav navbar-right">
+					<li>
+						<a class="page-scroll" href="#technologie">Technologie</a>
+					</li>
+					<li>
+						<a class="page-scroll" href="#cv">CURRICULUM VITAE</a>
+					</li>
+					<li>
+						<a class="page-scroll" href="#portfolio">PORTFOLIO</a>
+					</li>
+					<li>
+						<a class="page-scroll" href="#kontakt">Kontakt</a>
+					</li>
+					<li role="presentation" class="nav dropdown">
+						<a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+							Język <span class="caret"></span>
+						</a>
+						<ul style="width:50px;" class="dropdown-menu dropdown-menu-right">
+							<li><a class="text-center" href="/"><span class="flag-icon flag-icon-pl" ></span> PL</a></li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+
+	<!--[if lt IE 7]>
+      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+  <![endif]-->
+
+	<header>
+		<video loop muted autoplay class="header-bg-video">
+			<source src="img/header.webm" type="video/webm">
+			<source src="img/header.mp4" type="video/mp4">
+		</video>
+
+		<div class="header-content">
+			<div class="header-content-inner">
+				<h1 style="height: 120px;"><i class="fa fa-code wow bounceIn text-primary"></i> <span id="typed"></span></h1>
+				<hr>
+				<p>Nazywam się Alexander Ciesielski.</p>
+				<p>Jestem full-stack developerem specjalizującym się w najnowszych technologiach.</p>
+				<p></p>
+				<p>Stwórzmy razem aplikację jutra!</p>
+				<a href="#technologie" class="btn btn-primary btn-xl page-scroll">DOWIEDZ SIĘ WIĘCEJ</a>
+			</div>
+		</div>
+	</header>
+
+	<section class="bg-primary" id="technologie">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12 text-center">
+					<h2 class="section-heading">TECHNOLOGIE</h2>
+					<hr class="light">
+				</div>
+			</div>
+		</div>
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-3 col-md-6 text-center">
+					<div class="service-box">
+						<i class="fa fa-4x fa-mobile wow bounceIn"></i>
+						<i class="fa fa-4x fa-mobile wow bounceIn"></i>
+						<h3>Front-End</h3>
+						<p class="text-faded">HTML5, CSS,</p>
+						<p class="text-faded">AngularJS, MeteorJS, Ionic</p>
+
+					</div>
+				</div>
+				<div class="col-lg-3 col-md-6 text-center">
+					<div class="service-box">
+						<i class="fa fa-4x fa-server wow bounceIn" data-wow-delay=".2s"></i>
+						<h3>Back-End</h3>
+						<p class="text-faded">Spring + Hibernate,</p>
+						<p class="text-faded">Node.js, MeteorJS</p>
+					</div>
+				</div>
+				<div class="col-lg-3 col-md-6 text-center">
+					<div class="service-box">
+						<i class="fa fa-4x fa-database wow bounceIn" data-wow-delay=".4s"></i>
+						<h3>{{'DATABASES'}}</h3>
+						<p class="text-faded">SQL (Oracle, Postgre, MySQL)</p>
+						<p class="text-faded">NoSQL (MongoDB)</p>
+					</div>
+				</div>
+				<div class="col-lg-3 col-md-6 text-center">
+					<div class="service-box">
+						<i class="fa fa-4x fa-heart wow bounceIn" data-wow-delay=".6s"></i>
+						<h3>Chęć do nauki</h3>
+						<p class="text-faded">Nieustanny rozwój osobisty</p>
+						<p class="text-faded">i zainteresowanie najnowszymi technologiami</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section id="cv">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-8 col-lg-offset-2 text-center">
+					<h2 class="section-heading wow bounceIn">CURRICULUM VITAE</h2>
+					<hr class="primary">
+					<p>Urodziłem się w 1990 r. w Niemczech. Dwanaście lat później przeprowadziłem się z rodziną do Warszawy, gdzie zdałem maturę
+						Niemiecko-Polskiej Szkole im. Willyego Brandta</p>
+					<p>Następnie skończylem studia inżynierskie na Polsko-Japońskiej Wyższej Szkole Technik Komputerowych ze specjalizacją
+						<i>'Mobilne Urządzenia'</i>.</p>
+				</div>
+			</div>
+		</div>
+
+		<div class="container-fluid">
+			<div class="row">
+				<p></p>
+			</div>
+			<div class="row">
+				<div class="col-lg-8 col-lg-offset-2 text-center">
+					<h3 class="section-heading wow bounceIn">Historia Projektów</h3>
+					<hr />
+				</div>
+			</div>
+
+			<div class="table-responsive">
+				<table class="table table-striped text-center">
+					<thead>
+						<tr>
+							<th class="col-md-4 text-center" style="min-width:145px;">Kiedy?</th>
+							<th class="col-md-4 text-center">Gdzie?</th>
+							<th class="col-md-4 text-center">Co?</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>01/2015 - 10/2015</td>
+							<td>Capgemini, Wrocław</td>
+							<td>
+								<strong>Software Engineer</strong>
+								<br />Utrzymywanie kodu / naprawa bugów
+								<br />Administracja bazy danych
+								<br />3rd level support</td>
+						</tr>
+
+						<tr>
+							<td>08/2014 - 12/2014</td>
+							<td>Pentegy, Warszawa</td>
+							<td style="white-space:normal;">
+								<strong>Junior Developer</strong>
+								<br /> Praca nad wielowątkowym modułem dla <a href="http://www.mz.gov.pl/system-ochrony-zdrowia/panstwowe-ratownictwo-medyczne/organizacja-systemu-panstwowe-ratownictwo-medyczne/system-wspomagania-dowodzenia-prm">Systemu Wspomagania Dowodzenia dla Państwowego Ratownictwa Medycznego</a>,
+								którego celem było przetwarzanie i zapisywanie pakietów otrzymywanych z karetek, zawierających informacje o położeniu,
+								prędkości, włączonych światłach etc.
+							</td>
+						</tr>
+
+						<tr>
+							<td>01/2014 - 07/2014</td>
+							<td>ACI Worldwide, Warszawa</td>
+							<td><strong>Analityk IT</strong>
+								<br />Przygotowywanie dokumentów projektowych oraz specyfikacji technicznych</td>
+						</tr>
+
+						<tr>
+							<td>07/2010 - 08/2013</td>
+							<td>Bilans (Kancelaria podatkowa), Warszawa</td>
+							<td>
+								<strong>Administrator IT / Web Developer</strong>
+								<ul style="list-style-type:none;">
+									<li><a href="www.bilans.eu">www.bilans.eu</a></li>
+									<li><a href="www.bilans.eu">www.wszystkodlafirmy.pl</a></li>
+									<li><a href="www.bilans.eu">www.gbadwokaci.pl</a></li>
+								</ul>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</section>
+
+	<section class="no-padding" id="portfolio">
+		<div class="container-fluid">
+			<div class="row no-gutter">
+				<div class="col-lg-4 col-sm-6">
+					<a target="_blank" href="http://gbadwokaci.pl" class="portfolio-box">
+						<img src="img/portfolio/gbadwokaci_.jpg" class="img-responsive" alt="">
+						<div class="portfolio-box-caption">
+							<div class="portfolio-box-caption-content">
+								<div class="project-category text-faded">
+									Website
+								</div>
+								<div class="project-name">
+									gbadwokaci.pl (2012)
+								</div>
+							</div>
+						</div>
+					</a>
+				</div>
+				<div class="col-lg-4 col-sm-6">
+					<a target="_blank" href="http://bilans.eu" class="portfolio-box">
+						<img src="img/portfolio/bilans.jpg" class="img-responsive" alt="">
+						<div class="portfolio-box-caption">
+							<div class="portfolio-box-caption-content">
+								<div class="project-category text-faded">
+									Website
+								</div>
+								<div class="project-name">
+									bilans.eu (2011)
+								</div>
+							</div>
+						</div>
+					</a>
+				</div>
+				<div class="col-lg-4 col-sm-6">
+					<a target="_blank" href="http://wszystkodlafirmy.pl" class="portfolio-box">
+						<img src="img/portfolio/wdf.jpg" class="img-responsive" alt="">
+						<div class="portfolio-box-caption">
+							<div class="portfolio-box-caption-content">
+								<div class="project-category text-faded">
+									Website
+								</div>
+								<div class="project-name">
+									wszystkodlafirmy.pl (2011)
+								</div>
+							</div>
+						</div>
+					</a>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section id="kontakt">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-8 col-lg-offset-2 text-center">
+					<h2 class="section-heading wow bounceIn">KONTAKT</h2>
+					<hr />
+					<p>Jesteś gotowy by mnie zatrudnić do swojego następnego projektu? To świetnie!</p>
+					<p>Skorzystaj z formularza kontaktowego, a ja się odezwę jak najszybciej.</p>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col-lg-8 col-lg-offset-2 text-center">
+					<form role="form" id="contactForm" ng-submit="vm.sendMessage(vm.name, vm.email, vm.message)">
+						<div class="row">
+							<div class="form-group col-sm-6">
+								<label for="name" class="h4 text-uppercase">Imię i nazwisko</label>
+								<input type="text" class="form-control" id="name" ng-model="vm.name" placeholder="Imię i nazwisko" required>
+							</div>
+							<div class="form-group col-sm-6">
+								<label for="email" class="h4 text-uppercase">Mail</label>
+								<input type="email" class="form-control" id="email" ng-model="vm.email" placeholder="Mail" required>
+							</div>
+						</div>
+						<div class="form-group">
+							<label for="message" class="h4 text-uppercase">Wiadomość</label>
+							<textarea id="message" class="form-control" rows="5" ng-model="vm.message" placeholder="Wiadomość" required></textarea>
+						</div>
+						<button ng-disabled="vm.loading" type="submit" id="form-submit" class="btn btn-primary btn-xl btn-block">Wyślij</button>
+						<p id="msgSuccess" ng-show="vm.success" class="text-center success">Wiadomość została wysłana!</p>
+						<p id="msgError" ng-disabled="vm.loading" ng-value="vm.buttonText" ng-show="vm.error" class="text-center danger">Wystąpił błąd!</p>
+					</form>
+				</div>
+			</div>
+		</div>
+		<div class="container" style="margin-top:50px;">
+			<div class="row text-center">
+				<div class="col-lg-6">
+					<i class="fa fa-phone fa-3x wow bounceIn"></i>
+					<br />
+					<a class="btn btn-primary btn-xl" href="tel:+48 533 333 178">+48 <script type="text/javascript">
+<!--
+var s="644!444!289";
+m=""; for (i=0; i<s.length; i++) {	if(s.charCodeAt(i) == 28){	  m+= '&';} else if (s.charCodeAt(i) == 23) {	  m+= '!';} else {	  m+=String.fromCharCode(s.charCodeAt(i)-1);	}}document.write(m);//-->
+</script></a></p>
+				</div>
+
+				<div class="col-lg-6">
+					<i class="fa fa-envelope-o fa-3x wow bounceIn" data-wow-delay=".1s"></i>
+					<br />
+					<a class="btn btn-primary btn-xl" href="mailto:alexanderMALPAciesielskiKROPKAco" onclick="this.href=this.href.replace(/MALPA/,'&#64;').replace(/KROPKA/,'&#46;')">
+						<span id="mejl"></span>
+					</a>
+					</p>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- In production use:
+  <script src="//ajax.googleapis.com/ajax/libs/angularjs/x.x.x/angular.min.js"></script>
+  -->
+	<script src="bower_components/angular/angular.js"></script>
+	<script src="bower_components/angular-route/angular-route.js"></script>
+	<script src="bower_components/angularfire/dist/angularfire.min.js"></script>
+	<script src="bower_components/firebase/firebase-debug.js"></script>
+
+	<script src="app.module.js"></script>
+	<script src="app.controller.js"></script>
+
+	<!-- jQuery -->
+	<script src="js/jquery.js"></script>
+
+	<!-- Bootstrap Core JavaScript -->
+	<script src="js/bootstrap.min.js"></script>
+
+	<!-- Plugin JavaScript -->
+	<script src="js/jquery.easing.min.js"></script>
+	<script src="js/jquery.fittext.js"></script>
+	<script src="js/wow.min.js"></script>
+
+	<!-- Custom Theme JavaScript -->
+	<script src="js/creative.js"></script>
+
+	<!-- Typed.js -->
+	<script src="js/typed.min.js"></script>
+	<script>
+		$(function () {
+            $("#typed").typed({
+                strings: ["FULL-STACK DEVELOPER", "BACK-END DEVELOPER", "FRONT-END DEVELOPER", "MOBILE DEVELOPER"],
+                // typing speed
+                typeSpeed: 50,
+                // time before typing starts
+                startDelay: 500,
+                // backspacing speed
+                backSpeed: 0,
+                // time before backspacing
+                backDelay: 1000,
+                // loop
+                loop: true,
+                // false = infinite
+                loopCount: false,
+                // show cursor
+                showCursor: true,
+                // character for cursor
+                cursorChar: "|",
+                // either html or text
+                contentType: 'html' // or 'text'
+            });
+        });
+	</script>
+
+	<!--obscuremail-->
+	<script>
+		var parts = ["alexander", "ciesielski", "co", "&#46;", "&#64;"];
+        var mejl = parts[0] + parts[4] + parts[1] + parts[3] + parts[2];
+        document.getElementById("mejl").innerHTML = mejl;
+	</script>
+
+</body>
+
+</html>
