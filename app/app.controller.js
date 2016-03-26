@@ -5,15 +5,12 @@
         .module('app')
         .controller('AppController', AppController);
 
-    AppController.$inject = ['$window', '$firebaseArray', '$firebaseAuth'];
-    function AppController($window, $firebaseArray, $firebaseAuth) {
+    AppController.$inject = ['$window', '$firebaseArray'];
+    function AppController($window, $firebaseArray) {
         var vm = this;
-
         vm.submitForm = submitForm;
-        vm.authObj = null;
 
-        var ref = new $window.Firebase("https://ciesielski-co.firebaseio.com/");
-        var messagesRef = ref.child('messages');
+        var messagesRef = new $window.Firebase("https://ciesielski-co.firebaseio.com/messages/");
 
         init();
 
@@ -21,28 +18,16 @@
 
         function submitForm(name, email, message) {
             vm.loading = true;
-
-            // Login
-            //if (vm.authObj) {
-                // Already logged in
-                pushMessage(name, email, message);
-            //} else {
-                // Login first, then push message
-             //   vm.authObj = $firebaseAuth(ref).$authAnonymously()
-             //       .then(pushMessage(name, email, message))
-             //       .catch(submitFormError);
-           // }
+            pushMessage(name, email, message);
         }
 
         function pushMessage(name, email, message) {
-            // Push message
             var messages = $firebaseArray(messagesRef);
             messages.$add({
                 name: name,
                 email: email,
                 message: message,
-                createdAt: new Date(),
-                //userData: vm.authObj
+                createdAt: new Date()
             })
                 .then(submitFormSuccess)
                 .catch(submitFormError);
@@ -63,9 +48,9 @@
             vm.name = '';
             vm.email = '';
             vm.message = '';
+            
             vm.success = false;
             vm.error = false;
-            vm.success = false;
             vm.loading = false;
         }
     }
