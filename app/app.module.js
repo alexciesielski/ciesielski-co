@@ -6,23 +6,25 @@
 		// 3rd party modules
 		'ngRoute',
 		'firebase',
+        'pascalprecht.translate'
 	])
 		.config(configFunction)
 		.run(runFunction);
 
-	function configFunction($routeProvider) {
+	function configFunction($routeProvider, $translateProvider) {
 		$routeProvider.otherwise({ redirectTo: '/' });
 
 		// I18N
-		/*
+		
 		$translateProvider.translations('pl', {
 			NAVIGATION: 'Nawigacja',
 			TECHNOLOGIES: 'Technologie',
-			KONTAKT: 'Kontakt',
+			CONTACT: 'Kontakt',
 			HI_MYNAMEIS: 'Nazywam się',
 			ABOUTME: 'Jestem full-stack developerem specjalizującym się w najnowszych technologiach.',
 			ABOUTME_2: 'Specjalizuję sie w aplikacjach mobilnych i webowych.',
 			ABOUTME_3: 'Stwórzmy razem aplikację jutra!',
+            LEARN_MORE: 'Dowiedz się więcej',
 			DATABASES: 'Bazy danych',
 			WILL_TO_LEARN: 'Chęć do nauki',
 			NONSTOP_SELFDEVELOPMENT: 'Nieustanny rozwój osobisty',
@@ -49,7 +51,8 @@
 			NAV_ABOUT: 'About',
 			APP_TEXT: 'Some text about the awesome AngularJS app.'
 		});
-		$translateProvider.preferredLanguage('pl');*/
+        
+		$translateProvider.preferredLanguage('pl');
 	}
 
 	function runFunction($rootScope, $location) {
