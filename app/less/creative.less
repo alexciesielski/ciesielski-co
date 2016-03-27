@@ -162,6 +162,28 @@ header {
     background-image: url('../img/header.jpg');
     text-align: center;
     color: white;
+    overflow:hidden;
+    
+    @media (max-width: 767px) {
+        .header-bg-video {
+            display: none;
+        }
+    }
+    
+    .header-bg-video {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: auto;
+        height: auto;
+        min-width: 100%;
+        min-height: 100%;
+        -webkit-transform: translate(-50%, -50%);
+        -moz-transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+    }
+    
     .header-content {
         position: relative;
         text-align: center;
@@ -345,4 +367,32 @@ img::-moz-selection {
 
 body {
     webkit-tap-highlight-color: @theme-dark;
+}
+
+obscuremail::after {
+    content: attr(data-dmn);
+}
+obscuremail::before {
+    content: attr(data-usr) "\0040";
+}
+.typed-cursor{
+    opacity: 1;
+    -webkit-animation: blink 0.7s infinite;
+    -moz-animation: blink 0.7s infinite;
+    animation: blink 0.7s infinite;
+}
+@keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
+}
+@-webkit-keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
+}
+@-moz-keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
 }
