@@ -98,15 +98,30 @@ aside {
                 color: @theme-dark;
                 &:hover {
                     color: @theme-primary;
+                    background-color: rgba(50, 50, 50, 0.05);
                 }
             }
             &.active {
                 > a,
                 > a:focus {
                     color: @theme-primary !important;
-                    background-color: transparent;
+                    //background-color: transparent;
+                    background-color: rgba(50, 50, 50, 0.1);
                     &:hover {
-                        background-color: transparent;
+                        //background-color: transparent;
+                        background-color: rgba(50, 50, 50, 0.2);
+                    }
+                }
+            }
+            &.lang-active {
+                > a,
+                > a:focus {
+                    color: @theme-primary !important;
+                    //background-color: transparent;
+                    background-color: rgba(50, 50, 50, 0.3);
+                    &:hover {
+                        //background-color: transparent;
+                        background-color: rgba(50, 50, 50, 0.4);
                     }
                 }
             }

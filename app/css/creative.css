@@ -84,15 +84,25 @@ aside {
 .navbar-default .nav > li > a:hover,
 .navbar-default .nav > li > a:focus:hover {
   color: #F05F40;
+  background-color: rgba(50, 50, 50, 0.05);
 }
 .navbar-default .nav > li.active > a,
 .navbar-default .nav > li.active > a:focus {
   color: #F05F40 !important;
-  background-color: transparent;
+  background-color: rgba(50, 50, 50, 0.1);
 }
 .navbar-default .nav > li.active > a:hover,
 .navbar-default .nav > li.active > a:focus:hover {
-  background-color: transparent;
+  background-color: rgba(50, 50, 50, 0.2);
+}
+.navbar-default .nav > li.lang-active > a,
+.navbar-default .nav > li.lang-active > a:focus {
+  color: #F05F40 !important;
+  background-color: rgba(50, 50, 50, 0.3);
+}
+.navbar-default .nav > li.lang-active > a:hover,
+.navbar-default .nav > li.lang-active > a:focus:hover {
+  background-color: rgba(50, 50, 50, 0.4);
 }
 @media (min-width: 768px) {
   .navbar-default {
