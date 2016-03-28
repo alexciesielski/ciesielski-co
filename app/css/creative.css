@@ -237,6 +237,17 @@ header .header-content .header-content-inner p {
 .service-box p {
   margin-bottom: 0;
 }
+@media (max-width: 767px) {
+  .cv-table .table-responsive td {
+    white-space: pre-line !important;
+  }
+  .cv-table .table-responsive th {
+    min-width: 145px;
+  }
+}
+.cv-table ul {
+  list-style-type: none;
+}
 .portfolio-box {
   position: relative;
   display: block;
