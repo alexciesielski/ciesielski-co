@@ -61,6 +61,8 @@
             vm.success = false;
             vm.error = false;
             vm.loading = false;
+
+            //$window.loading_screen.finish();
         }
     }
 })();

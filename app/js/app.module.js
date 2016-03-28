@@ -22,7 +22,7 @@
             NAVIGATION: 'Nawigacja',
             TECHNOLOGIES: 'Technologie',
             CONTACT: 'Kontakt',
-            HI_MYNAMEIS: 'Nazywam się',
+            HI_MYNAMEIS: 'Cześć, nazywam się',
             ABOUTME: 'Jestem full-stack developerem specjalizującym się w najnowszych technologiach.',
             ABOUTME_2: 'Specjalizuję sie w aplikacjach mobilnych i webowych.',
             ABOUTME_3: '',
@@ -31,10 +31,10 @@
             WILL_TO_LEARN: 'Chęć do nauki',
             NONSTOP_SELFDEVELOPMENT: 'Nieustanny rozwój osobisty',
             AND_INTEREST_IN_TECHNOLOGIES: 'i zainteresowanie najnowszymi technologiami',
-            
+
             CV_1: 'Urodziłem się w 1990 r. w Niemczech. Dwanaście lat później przeprowadziłem się z rodziną do Warszawy, gdzie zdałem maturę  Niemiecko-Polskiej Szkole im. Willyego Brandta.',
             CV_2: 'Następnie skończylem studia inżynierskie na <strong>Polsko-Japońskiej Wyższej Szkole Technik Komputerowych</strong> ze specjalizacją \'<i>Mobilne Urządzenia<i>\'.',
-            
+
             PROJECTS: 'Historia Projektów',
             WROCLAW: 'Wrocław',
             WARSZAWA: 'Warszawa',
@@ -83,10 +83,10 @@
             WILL_TO_LEARN: 'Will to learn',
             NONSTOP_SELFDEVELOPMENT: 'Nonstop Self-Development',
             AND_INTEREST_IN_TECHNOLOGIES: 'and interest in newest technologies',
-            
+
             CV_1: 'Urodziłem się w 1990 r. w Niemczech. Dwanaście lat później przeprowadziłem się z rodziną do Warszawy, gdzie zdałem maturę  Niemiecko-Polskiej Szkole im. Willyego Brandta.',
             CV_2: 'Następnie skończylem studia inżynierskie na <strong>Polsko-Japońskiej Wyższej Szkole Technik Komputerowych</strong> ze specjalizacją \'<i>Mobilne Urządzenia<i>\'.',
-            
+
             PROJECTS: 'Project History',
             WROCLAW: 'Wroclaw',
             WARSZAWA: 'Warsaw',
@@ -135,10 +135,10 @@
             WILL_TO_LEARN: 'Lernspaß',
             NONSTOP_SELFDEVELOPMENT: 'Nonstop Self-Development',
             AND_INTEREST_IN_TECHNOLOGIES: 'und Interesse an den neuesten Technologien',
-            
+
             CV_1: 'Urodziłem się w 1990 r. w Niemczech. Dwanaście lat później przeprowadziłem się z rodziną do Warszawy, gdzie zdałem maturę  Niemiecko-Polskiej Szkole im. Willyego Brandta.',
             CV_2: 'Następnie skończylem studia inżynierskie na <strong>Polsko-Japońskiej Wyższej Szkole Technik Komputerowych</strong> ze specjalizacją \'<i>Mobilne Urządzenia<i>\'.',
-            
+
             PROJECTS: 'Projekte',
             WROCLAW: 'Breslau',
             WARSZAWA: 'Warschau',
@@ -178,9 +178,7 @@
     }
 
     function runFunction($rootScope, $location) {
-        angular.element(document).ready(function() {
-            //
-        });
+        
     }
 
 })();

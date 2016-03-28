@@ -34,6 +34,7 @@
 </head>
 
 <body id="page-top">
+
     <nav id="mainNav" class="navbar navbar-default navbar-fixed-top">
         <div class="container-fluid">
             <div class="navbar-header">
@@ -334,8 +335,10 @@
 
                                 <!-- Message -->
                                 <div class="form-group" ng-class="{ 'has-error': contactForm.message.$touched && contactForm.message.$invalid }">
-                                    <label translate for="message" class="h4 text-uppercase">{{'MESSAGE'}}</label><p class="small pull-right" ng-show="vm.message.length > 5"> {{vm.message.length}} / 1000</p>
-                                    <textarea name="message" id="message" class="form-control" rows="5" ng-model="vm.message" placeholder="" required ng-minlength="5" ng-maxlength="1000"></textarea>
+                                    <label translate for="message" class="h4 text-uppercase">{{'MESSAGE'}}</label>
+                                    <p class="small pull-right" ng-show="vm.message.length > 5"> {{vm.message.length}} / 1000</p>
+                                    <textarea name="message" id="message" class="form-control" rows="5" ng-model="vm.message" placeholder="" required ng-minlength="5"
+                                    ng-maxlength="1000"></textarea>
                                 </div>
 
                                 <!-- Submit -->
@@ -368,7 +371,7 @@
                             <div class="container" ng-show="vm.success">
                                 <h4 translate class="text-center text-success">{{'MESSAGE_SENT'}}</h4>
                             </div>
-                            
+
                         </div>
                     </div>
 
@@ -407,7 +410,7 @@ m=""; for (i=0; i<s.length; i++) {	if(s.charCodeAt(i) == 28){	  m+= '&';} else i
             </div>
         </div>
     </section>
-    
+
     <script src="bower_components/angular/angular.js"></script>
     <script src="bower_components/angular-translate/angular-translate.min.js"></script>
     <script src="bower_components/angular-route/angular-route.js"></script>

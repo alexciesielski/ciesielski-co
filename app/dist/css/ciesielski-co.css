@@ -6,6 +6,12 @@ body {
 body {
   font-family: 'Merriweather', 'Helvetica Neue', Arial, sans-serif;
 }
+body > .inner {
+  display: none;
+}
+body.pg-loaded > .inner {
+  display: block;
+}
 hr {
   border-color: #F05F40;
   border-width: 3px;

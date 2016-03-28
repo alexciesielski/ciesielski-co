@@ -12,6 +12,18 @@ body {
     .serif-font;
 }
 
+body > .inner {
+  display: none;
+}
+
+body.pg-loaded > .inner {
+  display: block;
+}
+
+.translate-cloak {
+    opacity: 0;
+}
+
 hr {
     border-color: @theme-primary;
     border-width: 3px;

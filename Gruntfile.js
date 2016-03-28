@@ -32,7 +32,8 @@
 		less: {
 		  build: {
 			files: {
-			  'app/dist/css/<%= pkg.name %>.css': 'app/less/app.less'
+			  //'app/dist/css/<%= pkg.name %>.css': 'app/less/app.less'
+			  'app/css/creative.css': 'app/less/app.less'
 			}
 		  }
 		},
