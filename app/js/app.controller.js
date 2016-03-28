@@ -45,7 +45,6 @@
         }
 
         function submitFormSuccess() {
-            init();
             vm.success = true;
         }
 
