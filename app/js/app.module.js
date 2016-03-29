@@ -127,7 +127,7 @@
             TECHNOLOGIES: 'Technologien',
             CONTACT: 'Kontakt',
             HI_MYNAMEIS: 'Hi, mein Name ist',
-            ABOUTME: 'I bin ein Full-Stack Developer und ich interessiere mich für die neuesten Web-Technologien.',
+            ABOUTME: 'Iich bin ein Full-Stack Developer und ich interessiere mich für die neuesten Web-Technologien.',
             ABOUTME_2: 'Ich spezialisiere mich in Web-, Mobil- und Hybrid-Apps.',
             ABOUTME_3: '',
             LEARN_MORE: 'Erfahre mehr',
@@ -156,8 +156,8 @@
             WHERE: 'Wo',
             WHAT: 'Was',
             IT_ANALYST: 'IT Analyst',
-            READY_TO_HIRE_ME: 'Ready to hire me for your next project? Awesome!',
-            USE_THE_CONTACT_FORM: 'Use the contact form below and I will reply ASAP.',
+            READY_TO_HIRE_ME: 'Bereit mich für dein nächstes Projekt einzustellen?',
+            USE_THE_CONTACT_FORM: 'Benutze das Kontaktformular und ich werde mich mich so schnell wie möglich melden.',
             NAME_SURNAME: 'Vor- & Nachname',
             EMAIL: 'Email',
             MESSAGE: 'Nachricht',
@@ -178,7 +178,10 @@
     }
 
     function runFunction($rootScope, $location) {
-        
+        var loading_screen = pleaseWait({
+            backgroundColor: '#f46d3b',
+            loadingHtml: "SSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSss"
+        });
     }
 
 })();
