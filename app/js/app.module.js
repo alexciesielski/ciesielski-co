@@ -178,10 +178,7 @@
     }
 
     function runFunction($rootScope, $location) {
-        var loading_screen = pleaseWait({
-            backgroundColor: '#f46d3b',
-            loadingHtml: "SSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSss"
-        });
+        
     }
 
 })();
