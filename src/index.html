@@ -14,22 +14,7 @@
 	<meta name="description" content="alexander ciesielski full stack full-stack developer mobile web hyprid app application iphone windows phone android angular angularjs javascript ionic meteor meteorjs java hibernate spring nodejs node.js front back end front-end back-end frontend backend">
 	<title>Alexander Ciesielski - ciesielski.co</title>
 
-<!-- build:style bundle -->
-	<!-- Bootstrap Core CSS -->
-	<link rel="stylesheet" href="css/ciesielski-co.bootstrap.min.css" type="text/css">
 
-	<!-- Plugin CSS -->
-	<link rel="stylesheet" href="css/flag-icon.min.css" type="text/css">
-	<link rel="stylesheet" href="css/font-awesome.min.css" type="text/css">
-	<link rel="stylesheet" href="css/animate.min.css" type="text/css">
-
-	<!-- Custom CSS -->
-	<link rel="stylesheet" href="css/ciesielski-co.css" type="text/css">
-
-	<!-- Custom Fonts -->
-	<link href="css/OpenSans300italic,400italic,600italic,700italic,800italic,400,300,600,700,800.css" rel="stylesheet" type="text/css">
-	<link href="css/Merriweather400,300,300italic,400italic,700,700italic,900,900italic.css" rel="stylesheet" type="text/css">
-<!-- /build -->
 </head>
 
 <body id="page-top">
@@ -418,35 +403,31 @@
 		</div>
 	</section>
 	
-	
-	
+	<!-- Production JS -->
+	<!--<script src="dist/js/jquery-bootstrap-angular-firebase-angularfire.js"></script>-->
 
 	<!-- jQuery -->
-	<!--<script src="js/jquery.js"></script>-->
-	<script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
-
-	<!-- Angular + Firebase -->
-	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular.min.js"></script>
-	<!--<script src="js/angular.min.js"></script>-->
-	
-	<!-- Typed.js -->
-	<script src="js/libs/typed.min.js"></script>
+	<script src="js/jquery.js"></script>
 
 	<!-- Bootstrap Core JavaScript -->
-	<script src="js/libs/ciesielski-co.bootstrap.min.js"></script>
+	<script src="js/ciesielski-co.bootstrap.min.js"></script>
+
+	<!-- Angular + Firebase -->
+	<script src="js/angular.min.js"></script>
+	<script src="js/firebase.js"></script>
+	<script src="js/angularfire.min.js"></script>
+
 	
-	<script src="js/libs/firebase.js"></script>
-	<script src="js/libs/angularfire.min.js"></script>
-
+	
 	<!-- Plugin JavaScript -->
-	<script src="js/libs/jquery.easing.min.js"></script>
-	<script src="js/libs/jquery.fittext.js"></script>
-	<script src="js/libs/wow.min.js"></script>
+	<script src="js/jquery.easing.min.js"></script>
+	<script src="js/jquery.fittext.js"></script>
+	<script src="js/wow.min.js"></script>
 
-	<script src="js/libs/angular-translate.min.js"></script>
-	<script src="js/libs/angular-route.min.js"></script>
-	<script src="js/libs/angular-messages.min.js"></script>
-	<script src="js/libs/angular-sanitize.min.js"></script>
+	<script src="js/angular-translate.min.js"></script>
+	<script src="js/angular-route.min.js"></script>
+	<script src="js/angular-messages.min.js"></script>
+	<script src="js/angular-sanitize.min.js"></script>
 
 	<!-- App Javascript -->
 	<script src="js/app.module.js"></script>
@@ -455,7 +436,8 @@
 	<!-- Custom Theme JavaScript -->
 	<script src="js/creative.js"></script>
 
-
+	<!-- Typed.js -->
+	<script src="js/typed.min.js"></script>
 	<script>
 		$(function () {
             $("#typed").typed({
@@ -471,13 +453,13 @@
                 // loop
                 loop: true,
                 // false = infinite
-                loopCount: 10,
+                loopCount: false,
                 // show cursor
                 showCursor: true,
                 // character for cursor
                 cursorChar: "|",
                 // either html or text
-                contentType: 'html'
+                contentType: 'html' // or 'text'
             });
         });
 	</script>

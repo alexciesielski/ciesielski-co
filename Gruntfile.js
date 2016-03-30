@@ -33,59 +33,116 @@
 				cwd: 'app/fonts/',
 				src: '**',
 				dest: 'app/dist/fonts/',
+			},
+			// copy flags folder
+			{
+				expand: true,
+				cwd: 'app/flags/',
+				src: '**',
+				dest: 'app/dist/flags/',
+			},
+			// copy js folder
+			{
+				expand: true,
+				cwd: 'app/js/',
+				src: '**',
+				dest: 'app/dist/js/',
 			}]
 		  }
 		},
 		
 		less: {
-		  build: {
-			files: {
-			  //'app/dist/css/<%= pkg.name %>.css': 'app/less/app.less'
-			  'app/css/<%= pkg.name %>.css': 'app/less/<%= pkg.name %>.less'
+			build: {
+				files: {
+					//'app/dist/css/<%= pkg.name %>.css': 'app/less/app.less'
+					'app/css/<%= pkg.name %>.css': 'app/less/<%= pkg.name %>.less'
+				}
 			}
-		  }
+		},
+		
+		cssmin: {
+			build: {
+				files: {
+					'app/dist/css/<%= pkg.name %>.min.css': [
+					
+						'app/css/ciesielski-co.bootstrap.min.css' , 
+						'app/css/flag-icon.min.css', 
+						'app/css/font-awesome.min.css', 
+						'app/css/animate.min.css', 
+						'app/css/Merriweather400,300,300italic,400italic,700,700italic,900,900italic.css', 
+						'app/css/OpenSans300italic,400italic,600italic,700italic,800italic,400,300,600,700,800.css', 
+						'app/css/<%= pkg.name %>.css'
+					]
+				}
+			}
 		},
 
 		jshint: {
-		  /*options: {
+			/*options: {
 				reporter: require('jshint-stylish')
 			},*/
-		  // when this task is run, lint the Gruntfile and all js files in src
-		  build: ['Gruntfile.js', 'app/js/app.module.js', 'app/js/app.controller.js']
+			build: ['Gruntfile.js', 'app/js/app.module.js', 'app/js/app.controller.js']
 		},
 		
 		uglify: {
-		  options: {
-			banner: '/*\n <%= pkg.name %> <%= grunt.template.today("yyyy-mm-dd") %> \n*/\n'
-		  },
-		  build: {
-			files: {
-			  //'app/dist/js/<%= pkg.name %>.min.js': ['app/js/app.module.js', 'app/js/app.controller.js', 'app/js/creative.js', 'app/js/typed.min.js']
-			  //'app/dist/js/<%= pkg.name %>.min.js': 'app/js/*.js'
-			  'app/dist/js/<%= pkg.name %>.min.js': 'app/js/app*.js'
+			options: {
+				//banner: '/*\n <%= pkg.name %> <%= grunt.template.today("yyyy-mm-dd") %> \n*/\n'
+			},
+			build: {
+				files: {
+					//'app/dist/js/<%= pkg.name %>.min.js': ['app/js/app.module.js', 'app/js/app.controller.js', 'app/js/creative.js', 'app/js/typed.min.js']
+					//'app/dist/js/<%= pkg.name %>.min.js': 'app/js/*.js'
+					'app/dist/js/<%= pkg.name %>.min.js': ['app/js/app*.js', 'app/js/creative.js']
+				}
 			}
-		  }
 		},		
-		
-		cssmin: {
-		  build: {
-			files: {
-			  //'app/dist/css/<%= pkg.name %>.min.css': 'app/css/<%= pkg.name %>.css'
-			  'app/dist/css/<%= pkg.name %>.min.css': ['app/css/ciesielski-co.bootstrap.min.css' , 'app/css/flag-icon.min.css', 'app/css/font-awesome.min.css', 'app/css/animate.min.css', 'app/css/Merriweather400,300,300italic,400italic,700,700italic,900,900italic.css', 'app/css/OpenSans300italic,400italic,600italic,700italic,800italic,400,300,600,700,800.css', 'app/css/<%= pkg.name %>.css']
-			}
-		  }
-		},
 		
 		concat: {
 			options: {
-			  separator: ';',
+				separator: ';',
 			},
-			dist: {
-			  src: ['app/js/jquery.js', 'app/js/bootstrap.min.js', 'app/js/angular.min.js', 'app/js/firebase.js', 'app/js/angularfire.min.js'],
-			  dest: 'app/dist/js/jquery-bootstrap-angular-firebase-angularfire.js',
+			build: {
+				src: [
+					'app/js/libs/ciesielski-co.bootstrap.min.js',
+					'app/js/libs/firebase.js',
+					'app/js/libs/angularfire.min.js',
+					'app/js/libs/angular-messages.js',
+					'app/js/libs/angular-route.min.js',
+					'app/js/libs/angular-sanitize.min.js',
+					'app/js/libs/angular-translate.min.js',
+					'app/js/libs/jquery.easing.min.js',
+					'app/js/libs/jquery.fittext.js',
+					'app/js/libs/typed.min.js',
+					'app/js/libs/wow.min.js'
+				],
+				dest: 'app/dist/js/libs.js',
 			},
-		  },
+		},
 		
+		htmlbuild: {
+			dist: {
+				src: 'app/index.html',
+				dest: 'app/dist/',
+				options: {
+					logOptions: true,
+					beautify: true,
+					allowUnknownTags: true,
+					styles: {
+						bundle: [
+							'app/dist/css/ciesielski-co.min.css'
+						]
+					}
+				}
+			}
+		},
+		
+		uncss: {
+			dist: {
+				files: {
+					'app/dist/css/ciesielski-co.min.css': ['app/dist/index.html']
+				}
+			}
+		}
 		
 
 	  });
@@ -99,10 +156,11 @@
 	  grunt.loadNpmTasks('grunt-contrib-concat');
 	  grunt.loadNpmTasks('grunt-contrib-compress');
 	  grunt.loadNpmTasks('grunt-html-build');
+	  grunt.loadNpmTasks('grunt-uncss');
 
 
 	  // Grunt default task  
-	  grunt.registerTask('default', ['less', 'jshint', 'uglify', 'cssmin']);
+	  grunt.registerTask('default', ['copy', 'less', 'cssmin', 'jshint', 'uglify', 'concat', 'htmlbuild', 'uncss']);
 	  
 	};
 }());
