@@ -178,7 +178,6 @@
     }
 
     function runFunction($rootScope, $location) {
-        
     }
 
 })();
