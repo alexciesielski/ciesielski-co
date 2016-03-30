@@ -254,8 +254,8 @@ header .header-content .header-content-inner p {
     min-width: 145px;
   }
 }
-.cv-table ul {
-  list-style-type: none;
+.cv-table table ul {
+  list-style-type: none !important;
 }
 .portfolio-box {
   position: relative;

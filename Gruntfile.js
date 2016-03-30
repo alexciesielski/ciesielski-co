@@ -47,7 +47,9 @@
 				cwd: 'app/js/',
 				src: '**',
 				dest: 'app/dist/js/',
-			}]
+			}
+			
+			]
 		  }
 		},
 		
@@ -86,6 +88,7 @@
 		
 		uglify: {
 			options: {
+				mangle: false,
 				//banner: '/*\n <%= pkg.name %> <%= grunt.template.today("yyyy-mm-dd") %> \n*/\n'
 			},
 			build: {
@@ -138,12 +141,34 @@
 		
 		uncss: {
 			dist: {
+				options: {
+					ignore: [
+						'.cv-table table ul',
+						'.nav',
+						'.navbar',
+						'.navbar-default',
+						'.navbar-default .navbar-header .navbar-brand',
+						'.navbar-default.affix', 
+						'.navbar-default.affix .nav > li > a'
+					]
+				},
 				files: {
 					'app/dist/css/ciesielski-co.min.css': ['app/dist/index.html']
 				}
 			}
-		}
+		},
 		
+		htmlmin: {
+			dist: {
+				options: {
+					removeComments: true,
+					collapseWhitespace: true
+				},
+				files: {
+					'app/dist/index.html': 'app/dist/index.html'
+				}
+			}
+		}		
 
 	  });
 
@@ -157,10 +182,11 @@
 	  grunt.loadNpmTasks('grunt-contrib-compress');
 	  grunt.loadNpmTasks('grunt-html-build');
 	  grunt.loadNpmTasks('grunt-uncss');
+	  grunt.loadNpmTasks('grunt-contrib-htmlmin');
 
 
 	  // Grunt default task  
-	  grunt.registerTask('default', ['copy', 'less', 'cssmin', 'jshint', 'uglify', 'concat', 'htmlbuild', 'uncss']);
+	  grunt.registerTask('default', ['copy', 'less', 'cssmin', 'jshint', 'uglify', 'concat', 'htmlbuild', 'htmlmin']);
 	  
 	};
 }());
