@@ -67,12 +67,13 @@
 				files: {
 					'app/dist/css/<%= pkg.name %>.min.css': [
 					
-						'app/css/ciesielski-co.bootstrap.min.css' , 
-						'app/css/flag-icon.min.css', 
-						'app/css/font-awesome.min.css', 
-						'app/css/animate.min.css', 
-						'app/css/Merriweather400,300,300italic,400italic,700,700italic,900,900italic.css', 
-						'app/css/OpenSans300italic,400italic,600italic,700italic,800italic,400,300,600,700,800.css', 
+						'app/css/ciesielski-co.bootstrap.min.css',
+						'app/css/flag-icon.min.css',
+						'app/css/font-awesome.min.css',
+						'app/css/animate.min.css',
+						'app/css/Merriweather400,300,300italic,400italic,700,700italic,900,900italic.css',
+						'app/css/OpenSans300italic,400italic,600italic,700italic,800italic,400,300,600,700,800.css',
+						'app/css/please-wait.css',
 						'app/css/<%= pkg.name %>.css'
 					]
 				}

@@ -12,19 +12,6 @@ body > .inner {
 body.pg-loaded > .inner {
   display: initial;
 }
-@keyframes cloak {
-  0% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
-  }
-}
-.translate-cloak {
-  opacity: 1;
-  animation-name: cloak;
-  animation-duration: 1s;
-}
 hr {
   border-color: #F05F40;
   border-width: 3px;
