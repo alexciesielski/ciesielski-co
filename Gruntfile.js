@@ -24,7 +24,9 @@
 		  },
 		  build: {
 			files: {
-			  'app/dist/js/<%= pkg.name %>.min.js': ['app/js/app.module.js', 'app/js/app.controller.js', 'app/js/creative.js', 'app/js/typed.min.js']
+			  //'app/dist/js/<%= pkg.name %>.min.js': ['app/js/app.module.js', 'app/js/app.controller.js', 'app/js/creative.js', 'app/js/typed.min.js']
+			  //'app/dist/js/<%= pkg.name %>.min.js': 'app/js/*.js'
+			  'app/dist/js/uglified-angular-libs.min.js': 'app/js/angu*.js'
 			}
 		  }
 		},
@@ -32,8 +34,8 @@
 		less: {
 		  build: {
 			files: {
-			  //'app/dist/css/<%= pkg.name %>.css': 'app/less/app.less'
-			  'app/css/creative.css': 'app/less/app.less'
+			  'app/dist/css/<%= pkg.name %>.css': 'app/less/app.less'
+			  //'app/css/creative.css': 'app/less/app.less'
 			}
 		  }
 		},

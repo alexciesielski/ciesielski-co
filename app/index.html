@@ -22,7 +22,7 @@
     rel="stylesheet" type="text/css">
     <link href="http://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic"
     rel="stylesheet" type="text/css">
-    <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css" type="text/css">
+    <link rel="stylesheet" href="css/font-awesome.min.css" type="text/css">
 
     <!-- Plugin CSS -->
     <link rel="stylesheet" href="css/animate.min.css" type="text/css">
@@ -34,6 +34,12 @@
 </head>
 
 <body id="page-top">
+
+    <!-- 
+        <script>
+            var loadingScreen = 
+        </script>
+    -->
 
     <nav id="mainNav" class="navbar navbar-default navbar-fixed-top">
         <div class="container-fluid">
@@ -318,7 +324,6 @@
                         <div class="panel-body">
                             <form role="form" name="contactForm" id="contactForm" ng-submit="vm.submitForm(vm.name, vm.email, vm.message)" novalidate>
                                 <div class="row">
-
                                     <!-- Name -->
                                     <div class="form-group col-sm-6" ng-class="{ 'has-error': contactForm.name.$touched && contactForm.name.$invalid }">
                                         <label translate for="name" class="h4 text-uppercase">{{'NAME_SURNAME'}}</label>
@@ -383,11 +388,14 @@
                 <div class="col-lg-4">
                     <i class="fa fa-phone fa-3x wow bounceIn"></i>
                     <br />
-                    <a class="btn btn-primary btn-xl" href="">+48 <script type="text/javascript">
+                    <a class="btn btn-primary btn-xl" href="">+48 
+                        <script type="text/javascript">
 <!--
-var s="644!444!289";
-m=""; for (i=0; i<s.length; i++) {	if(s.charCodeAt(i) == 28){	  m+= '&';} else if (s.charCodeAt(i) == 23) {	  m+= '!';} else {	  m+=String.fromCharCode(s.charCodeAt(i)-1);	}}document.write(m);//-->
-</script></a></p>
+                            var s="644!444!289";
+                            m=""; for (i=0; i<s.length; i++) {	if(s.charCodeAt(i) == 28){	  m+= '&';} else if (s.charCodeAt(i) == 23) {	  m+= '!';} else {	  m+=String.fromCharCode(s.charCodeAt(i)-1);	}}document.write(m);
+//-->
+                        </script>
+                    </a></p>
                 </div>
 
                 <div class="col-lg-4">
@@ -411,13 +419,13 @@ m=""; for (i=0; i<s.length; i++) {	if(s.charCodeAt(i) == 28){	  m+= '&';} else i
         </div>
     </section>
 
-    <script src="bower_components/angular/angular.js"></script>
-    <script src="bower_components/angular-translate/angular-translate.min.js"></script>
-    <script src="bower_components/angular-route/angular-route.js"></script>
-    <script src="bower_components/firebase/firebase.js"></script>
-    <script src="bower_components/angularfire/dist/angularfire.min.js"></script>
-    <script src="bower_components/angular-messages/angular-messages.min.js"></script>
-    <script src="bower_components/angular-sanitize/angular-sanitize.min.js"></script>
+    <script src="js/angular.min.js"></script>
+    <script src="js/angular-translate.min.js"></script>
+    <script src="js/angular-route.min.js"></script>
+    <script src="js/firebase.js"></script>
+    <script src="js/angularfire.min.js"></script>
+    <script src="js/angular-messages.min.js"></script>
+    <script src="js/angular-sanitize.min.js"></script>
 
     <script src="js/app.module.js"></script>
     <script src="js/app.controller.js"></script>
@@ -470,7 +478,6 @@ m=""; for (i=0; i<s.length; i++) {	if(s.charCodeAt(i) == 28){	  m+= '&';} else i
         var mejl = parts[0] + parts[4] + parts[1] + parts[3] + parts[2];
         document.getElementById("mejl").innerHTML = mejl;
     </script>
-
 </body>
 
 </html>
