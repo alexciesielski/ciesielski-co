@@ -92,7 +92,7 @@
                 // loop
                 loop: true,
                 // false = infinite
-                loopCount: 10,
+                loopCount: false,
                 // show cursor
                 showCursor: true,
                 // character for cursor

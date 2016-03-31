@@ -396,12 +396,15 @@
     "media.less",
     "list-group.less",
     "panels.less",
-    "component-animations.less"
+    "component-animations.less",
+    "dropdowns.less",
+    "modals.less"
   ],
   "js": [
     "affix.js",
+    "collapse.js",
     "scrollspy.js",
     "transition.js"
   ],
-  "customizerUrl": "https://getbootstrap.com/customize/?id=dd954726193e8a1178f2f26891f63b03"
+  "customizerUrl": "https://getbootstrap.com/customize/?id=343c6e1a003998ac392aebf42b492dbc"
 }
