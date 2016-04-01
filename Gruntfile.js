@@ -1,7 +1,5 @@
 // Gruntfile.js
 
-// our wrapper function (required by grunt and its plugins)
-// all configuration goes inside this function
 (function () {
    'use strict';
 	module.exports = function(grunt) {
@@ -45,7 +43,7 @@
 			{
 				expand: true,
 				cwd: 'app/js/',
-				src: '**',
+				src: ['**', '!libs.html'],
 				dest: 'app/dist/js/',
 			}
 			
@@ -56,7 +54,6 @@
 		less: {
 			build: {
 				files: {
-					//'app/dist/css/<%= pkg.name %>.css': 'app/less/app.less'
 					'app/css/<%= pkg.name %>.css': 'app/less/<%= pkg.name %>.less'
 				}
 			}
@@ -87,20 +84,54 @@
 			build: ['Gruntfile.js', 'app/js/app.module.js', 'app/js/app.controller.js']
 		},
 		
+		ngAnnotate: {
+			options: {
+				singleQuotes: true
+			},
+			app: {
+				files: {
+					'app/dist/js/app.module.js': ['app/js/app.module.js'],
+					'app/dist/js/app.controller.js': ['app/js/app.controller.js']
+				}
+			}
+		},
+		
+		concat: {
+			js: {
+				src: ['app/dist/js/app.module.js', 'app/dist/js/app.controller.js'],
+				dest: 'app/dist/js/ciesielski-co.js'
+			}
+		},
+		
 		uglify: {
 			options: {
-				mangle: false,
-				//banner: '/*\n <%= pkg.name %> <%= grunt.template.today("yyyy-mm-dd") %> \n*/\n'
+				mangle: false
 			},
 			build: {
 				files: {
-					//'app/dist/js/<%= pkg.name %>.min.js': ['app/js/app.module.js', 'app/js/app.controller.js', 'app/js/creative.js', 'app/js/typed.min.js']
-					//'app/dist/js/<%= pkg.name %>.min.js': 'app/js/*.js'
-					'app/dist/js/<%= pkg.name %>.min.js': ['app/js/app*.js']
+					//'app/dist/js/<%= pkg.name %>.min.js': ['app/js/app.module.js', 'app/js/app.controller.js']
+					//'app/dist/js/<%= pkg.name %>.min.js': 'app/js/*.js'					
+					'app/dist/js/libs.min.js': [
+						'app/js/libs/ciesielski-co.bootstrap.min.js',
+						'app/js/libs/firebase.js',
+						'app/js/libs/angularfire.min.js',
+						'app/js/libs/angular-messages.js',
+						'app/js/libs/angular-route.min.js',
+						'app/js/libs/angular-sanitize.min.js',
+						'app/js/libs/angular-translate.min.js',
+						'app/js/libs/jquery.easing.min.js',
+						'app/js/libs/jquery.fittext.js',
+						'app/js/libs/typed.min.js',
+						'app/js/libs/wow.min.js'
+					],
+					'app/dist/js/<%= pkg.name %>.min.js': [
+						'app/dist/js/ciesielski-co.js'
+					]
 				}
 			}
 		},		
 		
+		/*
 		concat: {
 			options: {
 				separator: ';',
@@ -119,9 +150,10 @@
 					'app/js/libs/typed.min.js',
 					'app/js/libs/wow.min.js'
 				],
-				dest: 'app/dist/js/libs.js',
+				dest: 'app/dist/js/libs.min.js',
 			},
 		},
+		*/
 		
 		htmlbuild: {
 			dist: {
@@ -135,6 +167,9 @@
 						bundle: [
 							'app/dist/css/ciesielski-co.min.css'
 						]
+					},
+					sections: {
+						scripts: 'app/js/libs.html'
 					}
 				}
 			}
@@ -184,10 +219,11 @@
 	  grunt.loadNpmTasks('grunt-html-build');
 	  grunt.loadNpmTasks('grunt-uncss');
 	  grunt.loadNpmTasks('grunt-contrib-htmlmin');
+	  grunt.loadNpmTasks('grunt-ng-annotate');
 
 
 	  // Grunt default task  
-	  grunt.registerTask('default', ['copy', 'less', 'cssmin', 'jshint', 'uglify', 'concat', 'htmlbuild', 'htmlmin']);
+	  grunt.registerTask('default', ['copy', 'less', 'cssmin', 'jshint', 'ngAnnotate', 'concat', 'uglify', 'htmlbuild', 'htmlmin']);
 	  
 	};
 }());

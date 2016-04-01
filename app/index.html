@@ -3,7 +3,7 @@
 <!--[if IE 7]>         <html lang="pl" ng-app="app" class="no-js lt-ie9 lt-ie8"> <![endif]-->
 <!--[if IE 8]>         <html lang="pl" ng-app="app" class="no-js lt-ie9"> <![endif]-->
 <!--[if gt IE 8]><!-->
-<html lang="pl" ng-app="app" ng-controller="AppController as vm" class="no-js">
+<html lang="pl" ng-app="app" ng-strict-di ng-controller="AppController as vm" class="no-js">
 <!--<![endif]-->
 
 <head>
@@ -460,22 +460,26 @@
     <!-- Bootstrap Core JavaScript -->
     <script src="js/libs/ciesielski-co.bootstrap.min.js"></script>
 
-    <script src="js/libs/firebase.js"></script>
-    <script src="js/libs/angularfire.min.js"></script>
-
     <!-- Plugin JavaScript -->
     <script src="js/libs/jquery.easing.min.js"></script>
     <script src="js/libs/jquery.fittext.js"></script>
     <script src="js/libs/wow.min.js"></script>
 
+    <script src="js/libs/firebase.js"></script>
+    <script src="js/libs/angularfire.min.js"></script>
     <script src="js/libs/angular-translate.min.js"></script>
     <script src="js/libs/angular-route.min.js"></script>
     <script src="js/libs/angular-messages.min.js"></script>
     <script src="js/libs/angular-sanitize.min.js"></script>
-
+    
+<!-- build:remove -->
     <!-- App Javascript -->
     <script src="js/app.module.js"></script>
     <script src="js/app.controller.js"></script>
+<!-- /build -->
+
+<!-- build:section scripts -->
+<!-- /build -->
 
     <!--obscuremail-->
     <script>
